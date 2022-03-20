@@ -1,4 +1,8 @@
 game:GetService("CoreGui").PurchasePrompt.Enabled = false
+if game:IsLoaded() then
+else
+	return
+end
 local Sound = Instance.new("Sound", game:GetService("SoundService"))
 Sound.SoundId = "rbxassetid://8503530582"
 Sound.Volume = 1.5
@@ -978,13 +982,15 @@ CMDBox.FocusLost:Connect(function(enterpress)
 	end
 end)
 
-game:GetService("Workspace").ChildAdded:Connect(function(Object)
-	if Object:IsA("Sound") then
-		if Object.Name == "HDAdminSound" then
-			Object:Destroy(print("Annoying audio is removed!"))
+coroutine.resume(coroutine.create(function()
+	while true do
+		if Object:IsA("Sound") then
+			if Object.Name == "HDAdminSound" then
+				Object:Destroy(print("Annoying audio is removed!"))
+			end
 		end
 	end
-end)
+end))
 
 Discord_3.MouseButton1Up:Connect(function()
     setclipboard(Discord_3.Text)
