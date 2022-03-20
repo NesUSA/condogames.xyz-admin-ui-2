@@ -49,25 +49,25 @@ local Commands = Instance.new("Frame")
 local Title_4 = Instance.new("TextLabel")
 local ScrollingFrame_2 = Instance.new("ScrollingFrame")
 local UIListLayout_3 = Instance.new("UIListLayout")
-local Command2 = Instance.new("TextLabel")
+local Command2 = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
 local UIPadding_9 = Instance.new("UIPadding")
-local Command1 = Instance.new("TextLabel")
+local Command1 = Instance.new("TextButton")
 local UICorner_7 = Instance.new("UICorner")
 local UIPadding_10 = Instance.new("UIPadding")
-local Command3 = Instance.new("TextLabel")
+local Command3 = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
 local UIPadding_11 = Instance.new("UIPadding")
-local Command4 = Instance.new("TextLabel")
+local Command4 = Instance.new("TextButton")
 local UICorner_9 = Instance.new("UICorner")
 local UIPadding_12 = Instance.new("UIPadding")
-local Command5 = Instance.new("TextLabel")
+local Command5 = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
 local UIPadding_13 = Instance.new("UIPadding")
-local Command6 = Instance.new("TextLabel")
+local Command6 = Instance.new("TextButton")
 local UICorner_11 = Instance.new("UICorner")
 local UIPadding_14 = Instance.new("UIPadding")
-local Command6_2 = Instance.new("TextLabel")
+local Command6_2 = Instance.new("TextButton")
 local UICorner_12 = Instance.new("UICorner")
 local UIPadding_15 = Instance.new("UIPadding")
 local CMDBox = Instance.new("TextBox")
@@ -991,6 +991,14 @@ coroutine.resume(coroutine.create(function()
 		end
 	end
 end))
+
+for _,Command in pairs(ScrollingFrame_2:GetChildren()) do
+	if Command:IsA("TextButton") then
+		Command.MouseButton1Up:Connect(function()
+			CMDBox.Text = Command.Text
+		end)
+	end
+end
 
 Discord_3.MouseButton1Up:Connect(function()
     setclipboard(Discord_3.Text)
