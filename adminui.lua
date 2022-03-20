@@ -121,7 +121,7 @@ CloseButton.BackgroundTransparency = 1.000
 CloseButton.BorderSizePixel = 0
 CloseButton.Position = UDim2.new(0.99999994, 0, 0, 0)
 CloseButton.Selectable = false
-CloseButton.Size = UDim2.new(0.113660894, 0, 0.119999997, 0)
+CloseButton.Size = UDim2.new(0.113660894, 0, 0, 30)
 CloseButton.Image = "rbxassetid://9151169116"
 CloseButton.ImageColor3 = Color3.fromRGB(255, 0, 0)
 CloseButton.ImageTransparency = 1.000
@@ -147,7 +147,7 @@ SetBottom.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 SetBottom.BackgroundTransparency = 1.000
 SetBottom.BorderSizePixel = 0
 SetBottom.Position = UDim2.new(0.886339068, 0, 0, 0)
-SetBottom.Size = UDim2.new(0.114089452, 0, 0.119999997, 0)
+SetBottom.Size = UDim2.new(0.114089452, 0, 0, 30)
 SetBottom.Text = ""
 
 ICO_2.Name = "ICO"
