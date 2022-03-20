@@ -1014,6 +1014,7 @@ coroutine.resume(coroutine.create(function()
 				end
 			end
 		end
+		task.wait()
 	end
 end))
 
