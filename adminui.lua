@@ -70,6 +70,9 @@ local UIPadding_14 = Instance.new("UIPadding")
 local Command6_2 = Instance.new("TextButton")
 local UICorner_12 = Instance.new("UICorner")
 local UIPadding_15 = Instance.new("UIPadding")
+local Command7 = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local UIPadding_17 = Instance.new("UIPadding")
 local CMDBox = Instance.new("TextBox")
 local UICorner_13 = Instance.new("UICorner")
 local UIPadding_16 = Instance.new("UIPadding")
@@ -576,6 +579,26 @@ UIPadding_15.Parent = Command6_2
 UIPadding_15.PaddingLeft = UDim.new(0.0500000007, 0)
 UIPadding_15.PaddingRight = UDim.new(0.0500000007, 0)
 
+Command7.Name = "Command7"
+Command7.Parent = ScrollingFrame_2
+Command7.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Command7.Size = UDim2.new(1, 0, 0, 0)
+Command7.Font = Enum.Font.SourceSansSemibold
+Command7.Text = "%log <logging audios>"
+Command7.TextColor3 = Color3.fromRGB(255, 255, 255)
+Command7.TextSize = 20.000
+Command7.TextWrapped = true
+Command7.TextXAlignment = Enum.TextXAlignment.Left
+Command7.TextYAlignment = Enum.TextYAlignment.Top
+Command7.AutomaticSize = Enum.AutomaticSize.Y
+
+UICorner_14.CornerRadius = UDim.new(0, 10)
+UICorner_14.Parent = Command7
+
+UIPadding_17.Parent = Command7
+UIPadding_17.PaddingLeft = UDim.new(0.0500000007, 0)
+UIPadding_17.PaddingRight = UDim.new(0.0500000007, 0)
+
 CMDBox.Name = "CMDBox"
 CMDBox.Parent = Commands
 CMDBox.AnchorPoint = Vector2.new(0.5, 1)
@@ -984,9 +1007,11 @@ end)
 
 coroutine.resume(coroutine.create(function()
 	while true do
-		if Object:IsA("Sound") then
-			if Object.Name == "HDAdminSound" then
-				Object:Destroy(print("Annoying audio is removed!"))
+		for _,v in pairs(game:GetService("Workspace"):GetChildren()) do
+			if v:IsA("Sound") then
+				if v.Name == "HDAdminSound" then
+					v:Destroy(print("Annoying audio is removed!"))
+				end
 			end
 		end
 	end
