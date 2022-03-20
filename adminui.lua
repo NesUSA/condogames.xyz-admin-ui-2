@@ -89,6 +89,7 @@ Popup.Parent = game:GetService("CoreGui")
 Popup.IgnoreGuiInset = false
 Popup.ResetOnSpawn = false
 Popup.ZIndexBehavior = Enum.ZIndexBehavior.Global
+Popup.DisplayOrder = 999999
 
 Frame.Name = "Frame"
 Frame.Parent = Popup
