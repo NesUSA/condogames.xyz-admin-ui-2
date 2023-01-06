@@ -1,4 +1,4 @@
-game:GetService("CoreGui").PurchasePrompt.Enabled = false
+game:GetService("CoreGui").PurchasePrompt.Enabled = true
 if game:IsLoaded() then
 else
 	return
